@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    
+    <style>
+      
+        body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('static/project1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px); /* Apply blur effect */
+    z-index: -1; /* Place it behind the content */
+    display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Set height to full viewport height */
+            margin: 0; /* Remove default margin */
+            padding-top: 50px;
+}
+
+.content {
+    z-index: 1; /* Ensure content is above the blurred background */
+    position: relative; /* Needed for z-index to work */
+}
+        .result-container {
+            text-align: center; /* Center text within container */
+            justify-content: center;
+            align-items: center;
+            padding-top: 200px;
+        }
+        h2 {
+            font-size: 36px; /* Increase font size */
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 24px; /* Increase font size */
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        {% if strength == 1 %}
+            <h2>Prediction Result</h2>
+            <p>You have Chronic Kidney Disease.</p>
+            <p>Disease Level: {{ disease_stage }}</p>
+        {% elif strength == 0 %}
+            <h2>Prediction Result</h2>
+            <p>You do not have Chronic Kidney Disease.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

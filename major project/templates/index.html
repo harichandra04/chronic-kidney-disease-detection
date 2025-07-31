@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Disease Stage</title>
+    <style>
+        /* Add custom styles */
+        .form-label {
+            font-size: 1.2em; /* Increase font size */
+            margin-bottom: 10px; /* Add space between labels */
+        }
+        .form-input {
+            margin-bottom: 10px; /* Add space between inputs */
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Disease Stage</h1>
+    <div style="display: flex;">
+        <!-- Image container -->
+        <div style="flex: 1;">
+            <img src="static\project2.png" alt="Project Image" style="width: 150%">
+        </div>
+        <!-- Form container -->
+        <div style="flex: 2; padding-left: 250px;"> <!-- Added padding for space between image and form -->
+            <form method="POST" action="/">
+                <label for="hemo" class="form-label">Hemoglobin (hemo):</label>
+                <input type="number" name="hemo" step="any" class="form-input" required><br>
+                
+                <label for="pcv" class="form-label">Packed Cell Volume (pcv):</label>
+                <input type="number" name="pcv" step="any" class="form-input" required><br>
+                
+                <label for="sg" class="form-label">Specific Gravity (sg):</label>
+                <input type="number" name="sg" step="any" class="form-input" required><br>
+                
+                <label for="sc" class="form-label">Serum Creatinine (sc):</label>
+                <input type="number" name="sc" step="any" class="form-input" required><br>
+                
+                <label for="al" class="form-label">Albumin (al):</label>
+                <input type="number" name="al" step="any" class="form-input" required><br>
+                
+                <label for="rbc" class="form-label">Red Blood Cell Count (rbc):</label>
+                <input type="number" name="rbc" step="any" class="form-input" required><br>
+                
+                <label for="rc" class="form-label">Red Blood Cell (rc):</label>
+                <input type="number" name="rc" step="any" class="form-input" required><br>
+                
+                <label for="dm" class="form-label">Diabetes Mellitus (dm):</label>
+                <input type="number" name="dm" step="any" class="form-input" required><br>
+                
+                <label for="bgr" class="form-label">Blood Glucose Random (bgr):</label>
+                <input type="number" name="bgr" step="any" class="form-input" required><br>
+                
+                <label for="sod" class="form-label">Sodium (sod):</label>
+                <input type="number" name="sod" step="any" class="form-input" required><br>
+                
+                <label for="htn" class="form-label">Hypertension (htn):</label>
+                <input type="number" name="htn" step="any" class="form-input" required><br>
+                
+                <label for="bu" class="form-label">Blood Urea (bu):</label>
+                <input type="number" name="bu" step="any" class="form-input" required><br>
+                
+                <label for="pc" class="form-label">Pus Cell:</label>
+                <input type="number" name="pc" step="any" class="form-input" required><br>
+                
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
